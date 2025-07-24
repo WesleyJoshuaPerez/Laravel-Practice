@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    @vite('resources/css/app.css')
+    <title>Company</title>
 </head>
 <body>
-    <h1>Contact page</h1>
-    <a href="{{url("/")}}">Go to Home</a>
+    <h1>Company</h1>
 </body>
 </html>
