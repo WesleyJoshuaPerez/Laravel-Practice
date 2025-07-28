@@ -15,10 +15,18 @@
     <a href="{{ url("/test")}}">Go to test</a> </br>
     <a href="{{ url("/contact")}}">Go to contact</a> --}}
 
-    <!--use to access named routes parameters the path of routes located in routes folter/web.php-->
+    {{-- <!--use to access named routes parameters the path of routes located in routes folter/web.php-->
     <a href="{{ route("testpage")}}">Go to test page</a> </br>
-    <a href="{{ route("contactpage")}}">Go to contact page</a>
+    <a href="{{ route("contactpage")}}">Go to contact page</a> --}}
 
-
+    <!--use for form route-->
+    <form action="{{ route('Formlaravel')}}" method="post">
+      @csrf
+    <label for="fullname">Fullname: </label> <br>
+     <input type="text" name="fullname" id="fullname" required> <br>
+     <label for="email">Email: </label> <br>
+      <input type="email" name="email" id="email" required> <br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
