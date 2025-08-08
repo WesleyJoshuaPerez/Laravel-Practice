@@ -18,6 +18,8 @@
     </header>
 
     <main>
+        <!--use to insert image in the project-->
+        <img src="{{asset('images/animeimage.jpg')}}" alt="">
      @yield('maincontent')
     </main>
 
