@@ -30,9 +30,9 @@ Route::post('/Formlaravel',function(Request $request){
 })->name("Formlaravel");
 
 // //parameters using routes
-// Route::get('/contact', function () {
-//     return view('contact');
-// })->name("contactpage");
+Route::get('/contact', function () {
+    return view('contact');
+})->name("contactpage");
 // //Named routes
 // Route::get('/test', function () {
 //     return "this is a test!";
