@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+             //use to add column in the table that you want to migrate
+            $table->string('title');
+             $table->string('body');
             $table->timestamps();
         });
     }
