@@ -1,0 +1,56 @@
+# 1. Create new Laravel project
+composer create-project laravel/laravel myproject   // "myproject" is your Laravel folder name
+
+
+//use to create laravel project inside of the folder using vs code terminal
+laravel new nameoftheproject
+
+# 2. Go inside the project folder
+cd myproject   // navigate into your Laravel project
+
+# 3. Start Laravel’s built-in development server
+php artisan serve   // runs Laravel app locally at http://127.0.0.1:8000
+
+# 4. Install Node.js dependencies (needed for frontend assets)
+npm install   // installs packages from package.json
+
+# 5. Install Vite (frontend build tool)
+npm install vite --save-dev   // adds vite as a dev dependency
+
+# 6. Run Vite for live asset changes
+npx vite   // runs Vite dev server for hot reloading of CSS/JS
+
+# 7. Run Laravel + Vite together
+npm run dev   // starts Vite and compiles assets while Laravel runs separately
+
+# 8. Build production-ready frontend assets
+npx vite build   // compiles/minifies assets for deployment
+
+# 9. Clear Laravel caches (optional but useful)
+php artisan cache:clear       // clears application cache
+php artisan config:clear      // clears config cache
+php artisan route:clear       // clears route cache
+php artisan view:clear        // clears compiled blade views
+
+
+//use to create model for the project
+php artisan make:model nameofthemodel -mcr
+
+
+//use to migrate the database (like update or adding new column or table)
+php artisan migrate
+
+//use to reset the migration if you forgot to sage before migrating the php migration file
+you need to delete the model and controller that use that migration file
+and create the model again it is use to reset it
+or use this instead
+php artisan migrate:rollback
+
+
+//use to migrate or rollback the migration in custom
+php artisan migrate --path=database/migrations/name of the file
+php artisan migrate:rollback --path=database/migrations/name of the file
+
+
+//use to rerun all the migration file 
+php artisan migrate:refresh
